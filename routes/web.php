@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/', [
+    'as' => 'index.index',
+    'uses' =>'Index\\IndexController@index'
+]);
